@@ -14,6 +14,7 @@ export class HomePage {
   // TODO: Save Recipes
   // TODO: Create Recipes
   // TODO: Add Credits
+  // TODO: Add links to ingredients? How can we reduce the barrier of entry to allowing people to purchase?:w
 
   waterTemplate;
 
