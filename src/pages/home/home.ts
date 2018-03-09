@@ -13,6 +13,8 @@ export class HomePage {
   // TODO: Create Recipes
   // TODO: Add Credits
 
+  waterTemplate;
+
   constructor(public navCtrl: NavController) {
 
   }
