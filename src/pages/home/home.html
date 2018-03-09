@@ -7,15 +7,22 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label>Choose which mineral water you want to recreate</ion-label>
-      <ion-select [(ngModel)]="waterTemplate">
-        <ion-option value="1">1</ion-option>
-        <ion-option value="2">2</ion-option>
-        <ion-option value="3">3</ion-option>
-        <ion-option value="4">4</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-title>Step 1.</ion-card-title>
+    <ion-card-header>Choose which mineral water you want to recreate</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Template</ion-label>
+          <ion-select [(ngModel)]="waterTemplate">
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  {{waterTemplate}}
 </ion-content>
