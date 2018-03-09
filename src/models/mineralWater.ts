@@ -15,16 +15,52 @@ export class mineralWater {
   comment: string;
   url: string;
 
-  private TDSArr = [
-    this.calcium
-    , this.magnesium
-    , this.sodium
-    , this.potassium
-    , this.bicarbonate
-    , this.sulfate
-    , this.chloride
-    , this.nitrate
-  ];
+  constructor(
+    id
+    , name
+    , calcium
+    , magnesium
+    , sodium
+    , potassium
+    , bicarbonate
+    , sulfate
+    , chloride
+    , nitrate
+    , co2
+    , pH
+    , TDS
+    , comment
+    , url
+  ) {
+    this.id = id;
+    this.name = name;
+    this.calcium = calcium;
+    this.magnesium = magnesium;
+    this.sodium = sodium;
+    this.potassium = potassium;
+    this.bicarbonate = bicarbonate;
+    this.sulfate = sulfate;
+    this.chloride = chloride;
+    this.nitrate = nitrate;
+    this.co2 = co2;
+    this.pH = pH;
+    this.TDS = TDS;
+    this.comment = comment;
+    this.url = url;
+  }
+
+  private TDSArr = () => {
+    return [
+      this.calcium
+      , this.magnesium
+      , this.sodium
+      , this.potassium
+      , this.bicarbonate
+      , this.sulfate
+      , this.chloride
+      , this.nitrate
+    ];
+  };
 
   /**
    * @function TDSCalculated()
@@ -32,7 +68,7 @@ export class mineralWater {
    * @returns {number}
    * @constructor
    */
-  TDSCalculated = () => this.TDSArr.reduce((i, j) => i + j);
+  TDSCalculated = ()  => this.TDSArr().reduce((i, j) => i + j);
 
   /**
    * @function TDSDiff()
@@ -77,5 +113,3 @@ export class mineralWater {
    */
   chargeDiff: number;
 }
-
-
