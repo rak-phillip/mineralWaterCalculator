@@ -8,8 +8,10 @@ import { NavController } from 'ionic-angular';
 
 export class HomePage {
 
-  // TODO: Save Recipes
   // TODO: List Recipes
+  //  TODO: Import list of recipes from spreadsheet
+
+  // TODO: Save Recipes
   // TODO: Create Recipes
   // TODO: Add Credits
 
