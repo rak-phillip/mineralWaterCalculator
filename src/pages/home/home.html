@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Mineral Water Calculator
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label>Choose which mineral water you want to recreate</ion-label>
+      <ion-select [(ngModel)]="waterTemplate">
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 </ion-content>
