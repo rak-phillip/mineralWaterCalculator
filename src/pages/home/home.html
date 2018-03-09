@@ -15,10 +15,9 @@
         <ion-item>
           <ion-label>Template</ion-label>
           <ion-select [(ngModel)]="waterTemplate">
-            <ion-option value="1">1</ion-option>
-            <ion-option value="2">2</ion-option>
-            <ion-option value="3">3</ion-option>
-            <ion-option value="4">4</ion-option>
+            <ion-option *ngFor="let item of water" value="{{item.id}}">
+              {{item.name}}
+            </ion-option>
           </ion-select>
         </ion-item>
       </ion-list>
