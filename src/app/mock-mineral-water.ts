@@ -29,9 +29,9 @@ export const waterList: mineralWater[] = [
     4.5,
     7,
     1.5,
+    0,
     6.5,
     130,
-    68,
     'Used for strong, pale, bitter ales',
     ''
   )
