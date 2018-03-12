@@ -23,5 +23,60 @@
       </ion-list>
     </ion-card-content>
   </ion-card>
-  {{waterTemplate}}
+  <ion-card *ngIf="waterTemplate">
+    <ion-card-content>
+      <ion-card-title>Analytics</ion-card-title>
+      <ion-card-header>Analytical data chosen for {{waterTemplate.name}}</ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col>mg/L</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>calcium</ion-col>
+          <ion-col>{{waterTemplate.calcium}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>magnesium</ion-col>
+          <ion-col>{{waterTemplate.magnesium}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>sodium</ion-col>
+          <ion-col>{{waterTemplate.sodium}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>potassium</ion-col>
+          <ion-col>{{waterTemplate.potassium}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>bicarbonate</ion-col>
+          <ion-col>{{waterTemplate.bicarbonate}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>sulfate</ion-col>
+          <ion-col>{{waterTemplate.sulfate}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>chloride</ion-col>
+          <ion-col>{{waterTemplate.chloride}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>nitrate</ion-col>
+          <ion-col>{{waterTemplate.nitrate}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>carbon dioxide</ion-col>
+          <ion-col>{{waterTemplate.co2}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>pH</ion-col>
+          <ion-col>{{waterTemplate.pH}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>TDS</ion-col>
+          <ion-col>{{waterTemplate.TDS}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
