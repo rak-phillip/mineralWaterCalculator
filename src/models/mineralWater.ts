@@ -1,14 +1,9 @@
+import {Composition} from "./composition";
+
 export class mineralWater {
   id: number;
   name: string;
-  calcium: number;
-  magnesium: number;
-  sodium: number;
-  potassium: number;
-  bicarbonate: number;
-  sulfate: number;
-  chloride: number;
-  nitrate: number;
+  composition: Composition;
   co2: number;
   pH: number;
   TDS: number;
@@ -34,14 +29,14 @@ export class mineralWater {
   ) {
     this.id = id;
     this.name = name;
-    this.calcium = calcium;
-    this.magnesium = magnesium;
-    this.sodium = sodium;
-    this.potassium = potassium;
-    this.bicarbonate = bicarbonate;
-    this.sulfate = sulfate;
-    this.chloride = chloride;
-    this.nitrate = nitrate;
+    this.composition.calcium = calcium;
+    this.composition.magnesium = magnesium;
+    this.composition.sodium = sodium;
+    this.composition.potassium = potassium;
+    this.composition.bicarbonate = bicarbonate;
+    this.composition.sulfate = sulfate;
+    this.composition.chloride = chloride;
+    this.composition.nitrate = nitrate;
     this.co2 = co2;
     this.pH = pH;
     this.TDS = TDS;
@@ -51,14 +46,14 @@ export class mineralWater {
 
   private TDSArr = () => {
     return [
-      this.calcium
-      , this.magnesium
-      , this.sodium
-      , this.potassium
-      , this.bicarbonate
-      , this.sulfate
-      , this.chloride
-      , this.nitrate
+      this.composition.calcium
+      , this.composition.magnesium
+      , this.composition.sodium
+      , this.composition.potassium
+      , this.composition.bicarbonate
+      , this.composition.sulfate
+      , this.composition.chloride
+      , this.composition.nitrate
     ];
   };
 
@@ -83,14 +78,14 @@ export class mineralWater {
    * @description The ratio of Calcium to Magnesium
    * @returns {number}
    */
-  caByMg = () => this.calcium / this.magnesium;
+  caByMg = () => this.composition.calcium / this.composition.magnesium;
 
   /**
    * @function caByNa()
    * @description The ration of Calcium to Sodium
    * @returns {number}
    */
-  caByNa = () => this.calcium / this.sodium;
+  caByNa = () => this.composition.calcium / this.composition.sodium;
 
 
   /**
@@ -98,10 +93,10 @@ export class mineralWater {
    * @description Calculates the positive charge for solution
    * @returns {number}
    */
-  positiveCharge = () => (2 * (this.calcium / 40.078))
-    + (2 * (this.magnesium / 24.305))
-    + (this.sodium / 22.99)
-    + (this.potassium / 39.098);
+  positiveCharge = () => (2 * (this.composition.calcium / 40.078))
+    + (2 * (this.composition.magnesium / 24.305))
+    + (this.composition.sodium / 22.99)
+    + (this.composition.potassium / 39.098);
 
   /**
    * @description Calculates the negative charge for solution
